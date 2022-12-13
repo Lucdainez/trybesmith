@@ -44,7 +44,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   
   * Este projeto é individual
   * Serão `2` dias de projeto
-  * Data para entrega final do projeto: `16/01/2023 14:00`
+  * Data para entrega regular do projeto: `16/01/2023 14:00`
 
 </details>
 
@@ -194,7 +194,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   1. Clone o repositório
 
-  - `git clone https://github.com/tryber/sd-023-a-project-trybesmith.git`.
+  - `git clone git@github.com:tryber/sd-023-a-project-trybesmith.git`.
   - Entre na pasta do repositório que você acabou de clonar:
     - `cd sd-023-a-project-trybesmith`
 
