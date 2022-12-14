@@ -1,9 +1,17 @@
 import productsModel from '../models/products.model';
-import { NewProduct } from '../types';
+import { NewProduct, AllProducts } from '../types';
 
 const postProducts = async ({ name, amount }: NewProduct): Promise<number> => {
   const productId: number = await productsModel.postProducts({ name, amount });
   return productId;
 };
 
-export default { postProducts };
+const getAllProducts = async (): Promise<AllProducts> => {
+  const allProducts: AllProducts = await productsModel.getAllProducts();
+  return allProducts;
+};
+
+export default {
+  postProducts,
+  getAllProducts,
+};
