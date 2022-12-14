@@ -22,3 +22,9 @@ export type NewUser = {
   level: number,
   password: string, 
 };
+
+export type Orders = {
+  id: number,
+  userId: number,
+  productsIds: number[],
+};
