@@ -15,3 +15,10 @@ export type AllProducts = {
   amount: string,
   orderId: number,
 };
+
+export type NewUser = {
+  username: string,
+  vocation: string,
+  level: number,
+  password: string, 
+};
