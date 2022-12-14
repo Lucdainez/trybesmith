@@ -13,6 +13,7 @@ const getAllProducts = async (): Promise<AllProducts> => {
   const [result] = await connection.execute<RowDataPacket[] & AllProducts>(query);
   return result as AllProducts;
 };
+
 export default {
   postProducts,
   getAllProducts,
