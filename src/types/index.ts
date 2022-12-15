@@ -28,3 +28,8 @@ export type Orders = {
   userId: number,
   productsIds: number[],
 };
+
+export type Login = {
+  username: string,
+  password: string,
+};
