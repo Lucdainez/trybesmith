@@ -33,3 +33,10 @@ export type Login = {
   username: string,
   password: string,
 };
+
+export type Token = {
+  id: number,
+  username: string,
+  iat: number,
+  exp: number
+};
