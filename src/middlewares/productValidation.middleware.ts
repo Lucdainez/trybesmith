@@ -52,6 +52,37 @@ const amountLengthValidation = (req: Request, res: Response, next: NextFunction)
   return next();
 };
 
+const productsIdsIsRequiredValidation = (req: Request, res: Response, next: NextFunction) => { 
+  const { productsIds } = req.body;  
+  if (!productsIds) {
+    return res
+      .status(400)
+      .json({ message: '"productsIds" is required' });
+  }
+  return next();
+};
+
+const productsIdsArrayValidation = (req: Request, res: Response, next: NextFunction) => { 
+  const { productsIds } = req.body;
+  if (!Array.isArray(productsIds)) { 
+    return res
+      .status(422)
+      .json({ message: '"productsIds" must be an array' });
+  }
+  return next();
+};
+
+const productsIdsNumberValidation = (req: Request, res: Response, next: NextFunction) => {
+  const { productsIds } = req.body;
+  const result = productsIds.every((productId: number) => typeof productId === 'number');
+  if (!result || productsIds.length === 0) {
+    return res
+      .status(422)
+      .json({ message: '"productsIds" must include only numbers' });
+  }
+  return next();
+};
+
 export default {
   nameValidationObrigatory,
   nameToStringValidation,
@@ -59,4 +90,7 @@ export default {
   amountValidationObrigatory,
   amountToStringValidation,
   amountLengthValidation,
+  productsIdsIsRequiredValidation,
+  productsIdsNumberValidation,
+  productsIdsArrayValidation,
 };
